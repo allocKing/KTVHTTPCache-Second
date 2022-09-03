@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B8E246E28C358EA00185ADF /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B8E246C28C358EA00185ADF /* GCDAsyncUdpSocket.h */; };
+		9B8E246F28C358EA00185ADF /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E246D28C358EA00185ADF /* GCDAsyncUdpSocket.m */; };
 		9C1F0E6320AFBB1D00FCC0B2 /* KTVCocoaHTTPServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C1F0E6120AFBB1D00FCC0B2 /* KTVCocoaHTTPServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C1F0E9220AFBBC600FCC0B2 /* DDData.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C1F0E6B20AFBBC600FCC0B2 /* DDData.h */; };
 		9C1F0E9320AFBBC600FCC0B2 /* DDData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1F0E6C20AFBBC600FCC0B2 /* DDData.m */; };
@@ -50,6 +52,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B8E246C28C358EA00185ADF /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		9B8E246D28C358EA00185ADF /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
 		9C1F0E5E20AFBB1D00FCC0B2 /* KTVCocoaHTTPServer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KTVCocoaHTTPServer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C1F0E6120AFBB1D00FCC0B2 /* KTVCocoaHTTPServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KTVCocoaHTTPServer.h; path = ../Framework/KTVCocoaHTTPServer.h; sourceTree = "<group>"; };
 		9C1F0E6220AFBB1D00FCC0B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Framework/Info.plist; sourceTree = "<group>"; };
@@ -213,6 +217,8 @@
 			children = (
 				9CACF7F520AFBCF000A72CB6 /* GCDAsyncSocket.h */,
 				9CACF7F620AFBCF000A72CB6 /* GCDAsyncSocket.m */,
+				9B8E246C28C358EA00185ADF /* GCDAsyncUdpSocket.h */,
+				9B8E246D28C358EA00185ADF /* GCDAsyncUdpSocket.m */,
 			);
 			path = CocoaAsyncSocket;
 			sourceTree = "<group>";
@@ -245,6 +251,7 @@
 				9C1F0EB520AFBBC600FCC0B2 /* WebSocket.h in Headers */,
 				9C1F0EAF20AFBBC600FCC0B2 /* HTTPErrorResponse.h in Headers */,
 				9C1F0EAB20AFBBC600FCC0B2 /* HTTPDataResponse.h in Headers */,
+				9B8E246E28C358EA00185ADF /* GCDAsyncUdpSocket.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +339,7 @@
 				9C1F0EB220AFBBC600FCC0B2 /* HTTPFileResponse.m in Sources */,
 				9C1F0E9F20AFBBC600FCC0B2 /* HTTPMessage.m in Sources */,
 				9C1F0EAE20AFBBC600FCC0B2 /* HTTPDynamicFileResponse.m in Sources */,
+				9B8E246F28C358EA00185ADF /* GCDAsyncUdpSocket.m in Sources */,
 				9C1F0EAA20AFBBC600FCC0B2 /* HTTPAsyncFileResponse.m in Sources */,
 				9CACF7F820AFBCF000A72CB6 /* GCDAsyncSocket.m in Sources */,
 				9C1F0EB620AFBBC600FCC0B2 /* WebSocket.m in Sources */,

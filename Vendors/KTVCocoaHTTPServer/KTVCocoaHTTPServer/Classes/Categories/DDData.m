@@ -12,10 +12,10 @@ static char encodingTable[64] = {
 
 - (NSData *)md5Digest
 {
-	unsigned char result[CC_MD5_DIGEST_LENGTH];
-    
-    CC_MD5([self bytes], (CC_LONG)[self length], result);
-    return [NSData dataWithBytes:result length:CC_MD5_DIGEST_LENGTH];
+	unsigned char result[CC_SHA256_DIGEST_LENGTH];
+    CC_SHA256([self bytes], (CC_LONG)[self length], result);
+//    CC_MD5([self bytes], (CC_LONG)[self length], result);
+    return [NSData dataWithBytes:result length:CC_SHA256_DIGEST_LENGTH];
 }
 
 - (NSData *)sha1Digest

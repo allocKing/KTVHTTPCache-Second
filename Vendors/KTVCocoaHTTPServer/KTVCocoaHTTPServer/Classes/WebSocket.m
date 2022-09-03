@@ -36,10 +36,11 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN; // | HTTP_LOG_FLAG_TRACE;
 #define WS_OP_PING                 9
 #define WS_OP_PONG                 10
 
-static inline BOOL WS_OP_IS_FINAL_FRAGMENT(UInt8 frame)
-{
-	return (frame & 0x80) ? YES : NO;
-}
+//#Warring Unused function 'WS_OP_IS_FINAL_FRAGMENT'
+//static inline BOOL WS_OP_IS_FINAL_FRAGMENT(UInt8 frame)
+//{
+//	return (frame & 0x80) ? YES : NO;
+//}
 
 static inline BOOL WS_PAYLOAD_IS_MASKED(UInt8 frame)
 {
@@ -108,7 +109,7 @@ static inline NSUInteger WS_PAYLOAD_LENGTH(UInt8 frame)
 	if (!upgradeHeaderValue || !connectionHeaderValue) {
 		isWebSocket = NO;
 	}
-	else if (![upgradeHeaderValue caseInsensitiveCompare:@"WebSocket"] == NSOrderedSame) {
+    else if (!([upgradeHeaderValue caseInsensitiveCompare:@"WebSocket"] == NSOrderedSame)) {
 		isWebSocket = NO;
 	}
 	else if ([connectionHeaderValue rangeOfString:@"Upgrade" options:NSCaseInsensitiveSearch].location == NSNotFound) {
@@ -215,7 +216,7 @@ static inline NSUInteger WS_PAYLOAD_LENGTH(UInt8 frame)
 - (void)setDelegate:(id)newDelegate
 {
 	dispatch_async(websocketQueue, ^{
-		delegate = newDelegate;
+        self->delegate = newDelegate;
 	});
 }
 
@@ -234,10 +235,10 @@ static inline NSUInteger WS_PAYLOAD_LENGTH(UInt8 frame)
 	
 	dispatch_async(websocketQueue, ^{ @autoreleasepool {
 		
-		if (isStarted) return;
-		isStarted = YES;
+        if (self->isStarted) return;
+        self->isStarted = YES;
 		
-		if (isVersion76)
+        if (self->isVersion76)
 		{
 			[self readRequestBody];
 		}
@@ -260,7 +261,7 @@ static inline NSUInteger WS_PAYLOAD_LENGTH(UInt8 frame)
 	
 	dispatch_async(websocketQueue, ^{ @autoreleasepool {
 		
-		[asyncSocket disconnect];
+        [self->asyncSocket disconnect];
 	}});
 }
 
